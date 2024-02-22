@@ -9,21 +9,26 @@
 <body>
     <div class="container">
         <h1>Fake Social Media</h1>
-        <div class="scrollable-content">
+        <div class="scrollable-content" id="postContainer">
+            <!-- Original posts -->
             <div class="post">
                 <h3>James</h3>
                 <p>I love to go fishing!</p>
             </div>
             <div class="post">
                 <h3>Jill</h3>
-                <p>Anybody wanna grab sushi?Check out the sushi place on 21st street.</p>
+                <p>Anybody wanna grab sushi? Check out the sushi place on 21st street.</p>
             </div>
             <div class="post">
                 <h3>Bob</h3>
                 <p>I'm new on this app. What do I do?</p>
             </div>
+            <!-- End of original posts -->
         </div>
+        <input type="text" id="postContent" placeholder="Enter your post...">
+        <button id="submitPost">Post</button>
         <a href="index.html" class="home-button">Home</a>
     </div>
+    <script src="app1.js"></script>
 </body>
 </html>
