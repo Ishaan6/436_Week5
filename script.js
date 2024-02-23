@@ -15,6 +15,11 @@ document.getElementById('doodleButton').addEventListener('click', function() {
     window.location.href = 'doodle.html';
 });
 
+document.getElementById('dragemButton').addEventListener('click', function() {
+    // Navigate to doodle.html when the button is clicked
+    window.location.href = 'dragem.html';
+});
+
 
 
 

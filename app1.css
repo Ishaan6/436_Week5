@@ -7,13 +7,15 @@ body {
 }
 
 .container {
-    max-width: 440px; /* Adjusted to match phone width */
+    max-width: 440px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #ffe0e6; /* Light pink background color */
-    border-radius: 40px; /* Adjusted to match phone border radius */
+    background-color: #ffe0e6;
+    border-radius: 40px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 20px solid #000; /* Add border similar to phone frame */
 }
+
 
 .post {
     border-bottom: 1px solid #ccc;

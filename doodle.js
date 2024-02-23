@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var context = canvas.getContext('2d');
 
     // Set canvas dimensions
-    canvas.width = 300;
-    canvas.height = 500;
+    canvas.width = 400;
+    canvas.height = 800;
 
     // Load the image
     var img = new Image();
@@ -64,9 +64,12 @@ document.addEventListener("DOMContentLoaded", function() {
             context.fillText('Revert', revertButtonX + 10, buttonY + 20);
 
             // Draw color squares
-            colorSquares.forEach(function(square) {
+            var totalWidth = colorSquares.length * 40; // Total width of all squares plus padding
+            var startX = (canvas.width - totalWidth) / 2; // Starting point for centering
+            colorSquares.forEach(function(square, index) {
+                var x = startX + index * 40; // 40 is the width of each square plus padding
                 context.fillStyle = square.color;
-                context.fillRect(square.x, square.y - 40, 30, 30);
+                context.fillRect(x-30, square.y - 40, 30, 30);
             });
         }
 
@@ -106,6 +109,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     drawingColor = square.color;
                     // Change cursor to a circle with the same color
                     canvas.style.cursor = 'url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'20\' height=\'20\'><circle cx=\'10\' cy=\'10\' r=\'5\' fill=\'' + drawingColor + '\'/><circle cx=\'10\' cy=\'10\' r=\'6\' stroke=\'black\' stroke-width=\'1\' fill=\'none\'/></svg>") 10 10, auto';
+                    return;
                 }
             });
         });
