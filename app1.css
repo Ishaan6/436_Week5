@@ -6,61 +6,52 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-
 .container {
-    max-width: 600px;
+    max-width: 440px; /* Adjusted to match phone width */
     margin: 20px auto;
     padding: 20px;
     background-color: #ffe0e6; /* Light pink background color */
-    border-radius: 10px;
+    border-radius: 40px; /* Adjusted to match phone border radius */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 .post {
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
 }
 
-
 .post:last-child {
     border-bottom: none;
 }
 
-
-/* Horizontal Scrolling */
+/* Vertical Scrolling */
 .scrollable-content {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
+    max-height: 600px; /* Adjusted to match phone height */
+    overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     margin-bottom: -20px;
 }
 
-
 .post {
     flex: 0 0 auto;
-    width: 300px; /*width*/
-    margin-right: 20px;
+    width: 100%; /* Adjusted to fit container width */
+    margin-bottom: 20px; /* Adjusted to create space between posts */
 }
-
 
 /* Styles for Post Content */
 .post h3 {
     margin-top: 0;
 }
 
-
 .post p {
     margin-bottom: 0;
 }
-
 
 /* Styles for the Home button */
 .home-button {
     position: absolute;
     top: 20px;
-    right: 450px;
+    right: calc((100vw - 440px) / 2); /* Adjusted to center align with phone */
     text-decoration: none;
     color: #fff;
     background-color: #007bff;
@@ -69,11 +60,6 @@ body {
     border-radius: 5px;
 }
 
-
 .home-button:hover {
     background-color: #0056b3;
 }
-
-
-
-
